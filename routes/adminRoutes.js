@@ -8,14 +8,19 @@ admin_route.use(bodyParser.urlencoded({extended:true}));
 admin_route.set('view engine','ejs');
 admin_route.set('views','./views');
 
-const session = require('express-session');0
+const session = require('express-session');
+const MemoryStore = require('memorystore')(session)
 const config =require("../config/config");
 
 const adminLoginAuth = require("../middlewares/adminLoginAuth");
 
 admin_route.use(session({
+     store: new MemoryStore({
+          checkPeriod: 86400000 // prune expired entries every 24h
+        }),
+        resave: false,
      secret:config.sessionSecret,
-    resave:true,
+  
     saveUninitialized:true
 
 }));
