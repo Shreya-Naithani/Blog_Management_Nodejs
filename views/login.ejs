@@ -1,6 +1,7 @@
 <%- include("./layouts/header.ejs") %>
-<div class="container mt-5 mb-5">
-    <h1>Login</h1>
+<div class="container mt-5 mb-5"style="width:30%;height:100%;">
+    <h1 style="display:flex;justify-content: center;"> Admin Login</h1>
+    <div class="center" style="display:flex;justify-content: center;border:2px solid black;">
     <%
     if(typeof message !=="undefined"){
         %>
@@ -11,12 +12,15 @@
     <form action="" method="POST">
         <div class="row mt-3">
             <div class="class-sm-12">
-<input type="email" name="email" placeholder="Enter Email"required>
+                <P>Email:</P>
+<input style="width:110%" type="email" name="email" placeholder="Enter Email"required><br>
             </div>
+            <br>
         </div>
         <div class="row mt-3">
             <div class="class-sm-12">
-<input type="password" name="password" placeholder="Enter password"required>
+                <P>Password:</P>
+<input  style="width:110%" type="password" name="password" placeholder="Enter password"required><br>
 
             </div>
         </div>
@@ -27,8 +31,9 @@
             </div>
         </div>
     </form>
+</div>
+    <a  style="display:flex;justify-content: center;" href="/forget-password">Forget Password</a>
 
-    <a href="/forget-password">Forget Password</a>
 </div>
 
 <%- include("./layouts/footer.ejs") %>
