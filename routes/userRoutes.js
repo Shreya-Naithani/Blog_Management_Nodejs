@@ -8,12 +8,14 @@ user_route.use(bodyParser.urlencoded({extended:true}));
 user_route.set('view engine','ejs');
 user_route.set('views','./views');
 
-const session = require('express-session');0
+const session = require('express-session');
+const MemoryStore = require('memorystore')(session)
 const config =require("../config/config");
 
 const adminLoginAuth = require("../middlewares/adminLoginAuth");
 
 user_route.use(session({secret:config.sessionSecret,
+     store:new MemoryStore,                    
     resave:true,
     saveUninitialized:true
 
