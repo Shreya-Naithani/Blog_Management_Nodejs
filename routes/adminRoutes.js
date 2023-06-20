@@ -15,9 +15,7 @@ const config =require("../config/config");
 const adminLoginAuth = require("../middlewares/adminLoginAuth");
 
 admin_route.use(session({
-     store: new MemoryStore({
-          checkPeriod: 86400000 // prune expired entries every 24h
-        }),
+     store: new MemoryStore,
         resave: false,
      secret:config.sessionSecret,
   
