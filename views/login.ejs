@@ -1,14 +1,15 @@
 <%- include("./layouts/header.ejs") %>
 <div class="container mt-5 mb-5"style="width:30%;height:100%;">
     <h1 style="display:flex;justify-content: center;"> Admin Login</h1>
-    <div class="center" style="display:flex;justify-content: center;border:2px solid black;">
-    <%
+   <%
     if(typeof message !=="undefined"){
         %>
-        <p style="color:red;"><%= message %></p>
+        <p style="color:red;display:flex;justify-content: center;"><%= message %></p>
         <% 
     }
      %>
+    <div class="center" style="display:flex;justify-content: center;border:2px solid black;">
+   
     <form action="" method="POST">
         <div class="row mt-3">
             <div class="class-sm-12">
