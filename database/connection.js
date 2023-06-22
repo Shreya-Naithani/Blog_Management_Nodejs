@@ -5,8 +5,6 @@ const connectDB=async()=>{
 // mongodb connection string
   const con =await mongoose.connect("mongodb://127.0.0.1:27017/BLOG_PROJECT",{
     useNewUrlParser:true,
-    useUnifiedTopology:true,
-   
   })
   console.log(`mongodb connected:${con.connection.host}`);
     }catch(err){
