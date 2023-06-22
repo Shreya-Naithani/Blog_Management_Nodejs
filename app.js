@@ -1,5 +1,6 @@
 const mongoose =require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/BLOG_PROJECT");
+mongoose.connect("mongodb://127.0.0.1:27017/BLOG_PROJECT",{useNewUrlParser:true});
+ const{Schema,model}=mongoose;
 
 const express = require('express');
 const app =express();
