@@ -1,9 +1,11 @@
-const mongoose =require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/BLOG_PROJECT",{useNewUrlParser:true});
- const{Schema,model}=mongoose;
+// const mongoose =require('mongoose');
+// mongoose.connect("mongodb://127.0.0.1:27017/BLOG_PROJECT",{useNewUrlParser:true});
+//  const{Schema,model}=mongoose;
 
+const connectDB=require("./database/connection");
 const express = require('express');
 const app =express();
+connectDB();
 
 const isBlog=require('./middlewares/isBlog');
 app.use(isBlog.isBlog);
