@@ -25,7 +25,7 @@ const sendResetPasswordMail = async (name, email, token) => {
       html:
         "<p>Hii" +
         name +
-        ', Please click here to <a href="http://127.0.0.1:3000/reset-password?token=' +
+        ', Please click here to <a href="http://0.0.0.0:3000/reset-password?token=' +
         token +
         '">Reset</a>your Password.',
     };
