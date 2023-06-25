@@ -1,40 +1,40 @@
 <%- include("./layouts/header.ejs") %>
-<div class="container mt-5 mb-5"style="width:30%;height:100%;">
+<div>
+<div class="container mt-5 mb-5">
     <h1 style="display:flex;justify-content: center;"> Admin Login</h1>
-   <%
+    <%
     if(typeof message !=="undefined"){
         %>
         <p style="color:red;display:flex;justify-content: center;"><%= message %></p>
         <% 
     }
      %>
-    <div class="center" style="display:flex;justify-content: center;border:2px solid black;">
-   
+    <div class="center mb-3">
+ 
     <form action="" method="POST">
-        <div class="row mt-3">
-            <div class="class-sm-12">
-                <P>Email:</P>
-<input style="width:110%" type="email" name="email" placeholder="Enter Email"required><br>
+        <div class="row mt-3" mb-3>
+            <div class="class-sm-12 mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter Email"required>
             </div>
             <br>
         </div>
         <div class="row mt-3">
-            <div class="class-sm-12">
-                <P>Password:</P>
-<input  style="width:110%" type="password" name="password" placeholder="Enter password"required><br>
+            <div class="class-sm-12 mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+<input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Enter password"required>
 
             </div>
         </div>
         <div class="row mt-3">
             <div class="class-sm-12">
 
-<input type="Submit" class="btn btn-secondary" value="login">
+<input style="margin:4px 4px;"type="Submit" class="btn btn-primary" value="login">
+<a href="/forget-password">Forget Password</a>
             </div>
         </div>
     </form>
 </div>
-    <a  style="display:flex;justify-content: center;" href="/forget-password">Forget Password</a>
-
 </div>
 
 <%- include("./layouts/footer.ejs") %>
